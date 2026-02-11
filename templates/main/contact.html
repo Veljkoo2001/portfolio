@@ -6,8 +6,8 @@
 {% block content %}
 <div class="row">
     <div class="col-lg-8">
-        <h1>Kontaktiraj me</h1>
-        <p class="lead">Imaš pitanje ili želiš da sarađuješ? Pošalji poruku!</p>
+        <h1>Contact me</h1>
+        <p class="lead">Do you have a question or want to collaborate? Send a message!</p>
         
         <!-- Django Messages -->
         {% if messages %}
@@ -24,14 +24,14 @@
         <form method="post" class="mt-4">
             {% csrf_token %}
             {{ form|crispy }}
-            <button type="submit" class="btn btn-primary">Pošalji poruku</button>
+            <button type="submit" class="btn btn-primary">Send a message</button>
         </form>
     </div>
     
     <div class="col-lg-4 mt-4 mt-lg-0">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Kontakt informacije</h5>
+                <h5 class="card-title">Contact information</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2">
                         <i class="fas fa-envelope me-2"></i>
@@ -49,8 +49,8 @@
                 
                 <hr>
                 
-                <h6>Brzi odgovor</h6>
-                <p class="small">Odgovaram obično u roku od 24 sata.</p>
+                <h6>Quick response</h6>
+                <p class="small">I usually respond within 24 hours.</p>
             </div>
         </div>
     </div>

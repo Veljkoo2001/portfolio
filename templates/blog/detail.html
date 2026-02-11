@@ -7,7 +7,7 @@
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Početna</a></li>
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
             <li class="breadcrumb-item"><a href="{% url 'blog:blog' %}">Blog</a></li>
             <li class="breadcrumb-item active">{{ post.title|truncatewords:5 }}</li>
         </ol>
@@ -20,7 +20,7 @@
             <div class="text-muted mb-4">
                 <i class="fas fa-calendar me-1"></i> {{ post.published_at|date:"d.m.Y. H:i" }}
                 <span class="mx-2">•</span>
-                <i class="fas fa-eye me-1"></i> {{ post.views }} pregleda
+                <i class="fas fa-eye me-1"></i> {{ post.views }} views
                 <span class="mx-2">•</span>
                 <i class="fas fa-user me-1"></i> {{ post.author.username }}
             </div>
@@ -39,7 +39,7 @@
         
         <!-- Komentari -->
         <section class="mb-5">
-            <h3>Komentari ({{ comments.count }})</h3>
+            <h3>Comments ({{ comments.count }})</h3>
             
             <!-- Lista komentara -->
             {% for comment in comments %}
@@ -54,21 +54,21 @@
             </div>
             {% empty %}
             <div class="alert alert-info">
-                Budite prvi koji će komentarisati!
+                Be the first to comment!
             </div>
             {% endfor %}
             
             <!-- Forma za komentar -->
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Ostavite komentar</h5>
+                    <h5 class="card-title">Leave a comment</h5>
                     <form method="post">
                         {% csrf_token %}
                         {{ comment_form.as_p }}
-                        <button type="submit" class="btn btn-primary">Pošalji komentar</button>
+                        <button type="submit" class="btn btn-primary">Send a comment</button>
                     </form>
                     <small class="text-muted d-block mt-2">
-                        Komentar će biti prikazan nakon odobrenja.
+                        The comment will be displayed after approval.
                     </small>
                 </div>
             </div>
@@ -77,7 +77,7 @@
         <!-- Povratak -->
         <div class="text-center">
             <a href="{% url 'blog:blog' %}" class="btn btn-outline-secondary">
-                <i class="fas fa-arrow-left me-2"></i> Nazad na blog
+                <i class="fas fa-arrow-left me-2"></i> Back to the blog
             </a>
         </div>
     </article>

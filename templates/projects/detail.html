@@ -7,8 +7,8 @@
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" class="mb-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">Početna</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'projects:project_list' %}">Projekti</a></li>
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'projects:project_list' %}">Projects</a></li>
             <li class="breadcrumb-item active">{{ project.title }}</li>
         </ol>
     </nav>
@@ -27,7 +27,7 @@
             
             <!-- Opis -->
             <div class="mb-4">
-                <h3>Opis projekta</h3>
+                <h3>Description of the project</h3>
                 <p>{{ project.description|linebreaks }}</p>
             </div>
             
@@ -55,11 +55,11 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Informacije o projektu</h5>
+                    <h5 class="card-title">Information about the project</h5>
                     
                     <!-- Tehnologije -->
                     <div class="mb-3">
-                        <h6>Korišćene tehnologije:</h6>
+                        <h6>Technologies used:</h6>
                         <div class="d-flex flex-wrap gap-2">
                             {% for tech in technologies_list %}
                             <span class="badge bg-primary">{{ tech }}</span>
@@ -69,13 +69,13 @@
                     
                     <!-- Datum -->
                     <div class="mb-3">
-                        <h6>Datum završetka:</h6>
+                        <h6>Project completion date:</h6>
                         <p class="mb-0">{{ project.completed_date|date:"F Y" }}</p>
                     </div>
                     
                     <!-- Linkovi -->
                     <div class="mb-3">
-                        <h6>Linkovi:</h6>
+                        <h6>Links:</h6>
                         {% if project.github_url %}
                         <a href="{{ project.github_url }}" target="_blank" class="btn btn-dark w-100 mb-2">
                             <i class="fab fa-github me-2"></i> GitHub Repo
@@ -91,7 +91,7 @@
                     
                     <!-- Povratak -->
                     <a href="{% url 'projects:project_list' %}" class="btn btn-outline-secondary w-100">
-                        <i class="fas fa-arrow-left me-2"></i> Nazad na projekte
+                        <i class="fas fa-arrow-left me-2"></i> Back to projects
                     </a>
                 </div>
             </div>

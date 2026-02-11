@@ -4,12 +4,12 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="mb-4">Moji Projekti</h1>
-    <p class="lead mb-5">Ovo su projekti koje sam razvio koristeći Python, PHP, JavaScript i ostale moderne web tehnologije.</p>
+    <h1 class="mb-4">My Projects</h1>
+    <p class="lead mb-5">These are projects that I developed using Python, PHP, JavaScript and other modern web technologies.</p>
     
     <!-- Istaknuti projekti -->
     {% if featured_projects %}
-    <h2 class="mb-4">Istaknuti projekti</h2>
+    <h2 class="mb-4">Featured projects</h2>
     <div class="row mb-5">
         {% for project in featured_projects %}
         <div class="col-md-6 col-lg-4 mb-4">
@@ -26,7 +26,7 @@
                             <span class="badge bg-secondary me-1">{{ tech }}</span>
                             {% endfor %}
                         </div>
-                        <a href="{{ project.get_absolute_url }}" class="btn btn-primary">Detalji</a>
+                        <a href="{{ project.get_absolute_url }}" class="btn btn-primary">Details</a>
                         {% if project.live_url %}
                         <a href="{{ project.live_url }}" target="_blank" class="btn btn-outline-secondary ms-2">
                             <i class="fas fa-external-link-alt"></i> Demo
@@ -41,7 +41,7 @@
     {% endif %}
     
     <!-- Ostali projekti -->
-    <h2 class="mb-4">Svi projekti</h2>
+    <h2 class="mb-4">All projects</h2>
     <div class="row">
         {% for project in other_projects %}
         <div class="col-md-6 col-lg-4 mb-4">
@@ -53,7 +53,7 @@
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.short_description }}</p>
                     <div class="mt-auto">
-                        <a href="{{ project.get_absolute_url }}" class="btn btn-outline-primary">Detalji</a>
+                        <a href="{{ project.get_absolute_url }}" class="btn btn-outline-primary">Details</a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
         {% empty %}
         <div class="col-12">
             <div class="alert alert-info">
-                Trenutno nema projekata. Vrati se uskoro!
+                There are currently no projects. Come back soon!
             </div>
         </div>
         {% endfor %}
