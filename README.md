@@ -49,7 +49,7 @@ Basic server security and permissions
 Debugging deployment issues
 
 🗂 Project Structure
-
+'''
 ├── 📁 blog
 │   └── 📁 migrations
 ├── 📁 main
@@ -63,7 +63,7 @@ Debugging deployment issues
     ├── 📁 blog
     ├── 📁 main
     └── 📁 projects
-
+'''
 🚀 Production Deployment Overview
 
 The application is deployed on a Linux server using:
