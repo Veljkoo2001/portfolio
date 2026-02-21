@@ -49,7 +49,7 @@ Basic server security and permissions
 Debugging deployment issues
 
 🗂 Project Structure
-'''
+```
 ├── 📁 blog
 │   └── 📁 migrations
 ├── 📁 main
