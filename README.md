@@ -48,6 +48,22 @@ Managing services on Linux server
 Basic server security and permissions
 Debugging deployment issues
 
+🗂 Project Structure
+
+├── 📁 blog
+│   └── 📁 migrations
+├── 📁 main
+│   └── 📁 migrations
+├── 📁 portfolio_project
+├── 📁 projects
+│   └── 📁 migrations
+├── 📁 static
+│   └── 📁 css
+└── 📁 templates
+    ├── 📁 blog
+    ├── 📁 main
+    └── 📁 projects
+
 🚀 Production Deployment Overview
 
 The application is deployed on a Linux server using:
