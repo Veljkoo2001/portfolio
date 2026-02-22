@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '0 0 * * 0'  # Svake nedjelje u ponoć
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   security:
